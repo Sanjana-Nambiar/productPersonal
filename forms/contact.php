@@ -15,6 +15,11 @@
     die( 'Unable to load the "PHP Email Form" Library!');
   }
 
+  if (!class_exists('PHP_Email_Form')) {
+    die("PHP_Email_Form class not found. Check the file path.");
+  }
+  
+
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
   
